@@ -1,4 +1,4 @@
-pragma solidity ^0.4.23;
+pragma solidity 0.4.23;
 
 contract DeliveryDroneControl {
     /// @dev account of drone itself
@@ -39,7 +39,7 @@ contract DeliveryDroneControl {
          /// construct the struct 'Delivery' and assign it to storage.
          var queue = requestQueue;
          queue[queue.length++] = Delivery(from, to);
-         DeliveryRequested(from , to);
+         emit DeliveryRequested(from , to);
     }
 
     /**
@@ -52,10 +52,6 @@ contract DeliveryDroneControl {
             return requestQueue[0].to;
         else
             return requestQueue[0].from;
-    }
-
-    function delivered() onlyCalledByDrone {
-        
     }
 
 }

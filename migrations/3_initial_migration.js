@@ -1,5 +1,5 @@
-var New = artifacts.require("./New.sol");
+var ProofOfExistencel2 = artifacts.require("./ProofOfExistencel2.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(New);
+  deployer.deploy(ProofOfExistencel2);
 };
